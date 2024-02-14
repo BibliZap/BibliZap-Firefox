@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "BibliZap",
+  "version": "1.0.2",
+  "description": "Detects DOI and creates a clickable link to BibliZap the article",
+  "permissions": ["activeTab", "*://app.biblizap.org/"],
+  "web_accessible_resources": ["BBZ.png"],
+    "icons": {
+    "48": "icons/BBZ.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
